@@ -3,7 +3,9 @@ package main.java;
 public class Player {
 
     private boolean turnIndicator;
+    private boolean hasLost = false;
     private int playerFigure;
+    private int name;
 
     /**
      * @param playerFigure 1-4
@@ -18,8 +20,15 @@ public class Player {
         return account.getBalance();
     }
 
-    public void setBalance(int balance) {       //setter
-        //mangler method body
+    public void setBalance(int amount) {       //setter
+        account.setBalance(amount);
+        if (account.checkIfLost()) {
+            this.hasLost = true;
+        }
+    }
+
+    public void setPlayerLost(){
+        this.hasLost = true;
     }
 
     public void setTurnIndicator(boolean turnIndicator) {       //sets turnIndicator to either true or false

@@ -5,7 +5,7 @@ public class Player {
     private boolean turnIndicator;
     private boolean hasLost = false;
     private int playerFigure;
-    private int name;
+    private String playerName;
 
     /**
      * @param playerFigure 1-4
@@ -27,6 +27,10 @@ public class Player {
         }
     }
 
+    public int getPlayerFigure(){
+        return this.playerFigure;
+    }
+
     public void setPlayerLost(){
         this.hasLost = true;
     }
@@ -38,4 +42,13 @@ public class Player {
     public boolean isTurnIndicator() {     //gets turnIndicator
         return turnIndicator;
     }
+
+    public void setPlayerName(String name){
+        this.playerName = name;
+    }
+
+    public String getPlayerName(){
+        return playerName;
+    }
+
 }

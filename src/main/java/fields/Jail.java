@@ -1,19 +1,16 @@
 package fields;
-public static class Jail {
+public class Jail {
 
     int bail = 1;
-    int[] playersInJail;
-    playersInJail = new int[4];
+    int[] playersInJail = new int[4];
+    public int freePlayer(Boolean isInjail){
 
-    public int freePlayer(int playerID){
-
-        if(playerID ==  )
-
-        return bail;
+        if(isInjail)
+            isInjail = false;
+            return bail;
     }
 
     public void setPlayersInJail(int[] playersInJail) {
         this.playersInJail = playersInJail;
-
     }
 }

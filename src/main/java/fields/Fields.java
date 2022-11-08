@@ -1,5 +1,6 @@
 package fields;
 
-public class Fields {
+public abstract class Fields {
+
     int boardPlacement;
 }

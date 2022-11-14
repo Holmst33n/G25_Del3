@@ -1,8 +1,15 @@
 package main.java;
 import java.util.*;
+import gui_main.GUI;
 
 public class Main {
     public static void main(String[] args) {
+
+        GUI gui = new GUI();
+
+        GUI_Player player1 = new GUI_Player("Hund", 20);
+
+        /*
         Scanner scanner = new Scanner(System.in);
         System.out.println("Indtast antallet af spillere (2-4): ");
 
@@ -54,5 +61,7 @@ public class Main {
         else{
             System.out.println("Der skal være 2-4 spillere.");
         }
+
+         */
     }
 }

@@ -1,13 +1,16 @@
-package main.java;
 import java.util.*;
-import gui_main.GUI;
+
+import gui_fields.*;;
+import gui_main.*;
 
 public class Main {
     public static void main(String[] args) {
 
         GUI gui = new GUI();
-
         GUI_Player player1 = new GUI_Player("Hund", 20);
+        gui.addPlayer(player1);
+
+
 
         /*
         Scanner scanner = new Scanner(System.in);

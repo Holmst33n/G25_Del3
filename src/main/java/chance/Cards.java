@@ -12,6 +12,7 @@ public class Cards {
     }
     public int getValue(){
     }
+    //Idéen med koden her er at:
     //Overstående skal bruges til basale kort med én handling
     //Understående skal bruges til kort med flere handlinger f.eks. Ryk x felter tilbage og betal x penge
     public String text;

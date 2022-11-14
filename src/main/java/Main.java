@@ -9,7 +9,6 @@ public class Main {
         int spillere = scanner.nextInt();
         GameBoard gameBoard = new GameBoard(spillere);
 
-
         if (gameBoard.getPlayerAmount() == 2) {
             Player player1 = new Player(1);
             System.out.println("Indtast spiller 1's navn: ");

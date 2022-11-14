@@ -1,14 +1,27 @@
 package chance;
+import java.util.HashMap;
 public class Cards {
+    String description;
+    int value;
 
-    public String desc;
+    Cards(String desc, int value) {
+        this.description = desc;
+        this.value = value;
+    }
+    public String getDescription(){
+    }
+    public int getValue(){
+    }
+    //Overstående skal bruges til basale kort med én handling
+    //Understående skal bruges til kort med flere handlinger f.eks. Ryk x felter tilbage og betal x penge
+    public String text;
     public HashMap<String, Integer> actions;
-
-    Cards (String desc) {
-        this.desc = desc;
+    Cards(String text) {
+        this.text = text;
         actions = new HashMap<String, Integer>();
     }
-    public addAction(String action, int value) {
+    addAction(String action, int value) {
         actions.put(action, value);
     }
+
 }

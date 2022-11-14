@@ -1,37 +1,37 @@
 import java.awt.*;
 import java.util.*;
 
-import gui_fields.*;;
+import gui_fields.*;
 import gui_main.*;
 
 public class Main {
     public static void main(String[] args) {
 
         GUI_Field[] fields = {
-                new GUI_Start(),
-                new GUI_Street(),
-                new GUI_Street(),
+                new GUI_Start("Start", "Modtag M2", "Modtag M2 når du passerer", Color.WHITE,Color.BLACK),
+                new GUI_Street("Burgerbaren", "M1", "Koster M1", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Street("Pizzeriaet", "M1", "Koster M1", "M1", Color.WHITE,Color.BLACK),
                 new GUI_Chance(),
-                new GUI_Street(),
-                new GUI_Street(),
-                new GUI_Jail(),
-                new GUI_Street(),
-                new GUI_Street(),
+                new GUI_Street("Slikbutikken", "M1", "Koster M1", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Street("Iskiosken", "M1", "Koster M1", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Jail("Default", "Fængsel", "På besøg", "Fængsel", Color.WHITE,Color.BLACK),
+                new GUI_Street("Museet", "M2", "Koster M2", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Street("Biblioteket", "M2", "Koster M2", "M1", Color.WHITE,Color.BLACK),
                 new GUI_Chance(),
-                new GUI_Street(),
-                new GUI_Street(),
-                new GUI_Refuge(),
-                new GUI_Street(),
-                new GUI_Street(),
+                new GUI_Street("Skaterparken", "M2", "Koster M2", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Street("Swimmingpoolen", "M2", "Koster M2", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Refuge("Default", "Gratis parkering", "Gratis parkering", "Gratis parkering", Color.WHITE,Color.BLACK),
+                new GUI_Street("Spillehallen", "M3", "Koster M3", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Street("Biografen", "M3", "Koster M3", "M1", Color.WHITE,Color.BLACK),
                 new GUI_Chance(),
-                new GUI_Street(),
-                new GUI_Street(),
-                new GUI_Jail(),
-                new GUI_Street(),
-                new GUI_Street(),
+                new GUI_Street("Legetøjsbutikken", "M3", "Koster M3", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Street("Dyrehandlen", "M3", "Koster M3", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Jail("Default", "Gå i fængsel", "Gå i fængsel", "Gå i fængsel", Color.WHITE,Color.BLACK),
+                new GUI_Street("Bowlinghallen", "M4", "Koster M4", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Street("Zoo", "M4", "Koster M4", "M1", Color.WHITE,Color.BLACK),
                 new GUI_Chance(),
-                new GUI_Street(),
-                new GUI_Street(),
+                new GUI_Street("Vandlandet", "M4", "Koster M4", "M1", Color.WHITE,Color.BLACK),
+                new GUI_Street("Strandpromenaden", "M4", "Koster M4", "M1", Color.WHITE,Color.BLACK),
         };
 
         GUI gui = new GUI(fields);
@@ -43,84 +43,6 @@ public class Main {
         gui.addPlayer(player2);
         gui.addPlayer(player3);
         gui.addPlayer(player4);
-
-        GUI_Field start = gui.getFields()[0];
-        start.setTitle("Start");
-        start.setSubText("Modtag 2M");
-        start.setBackGroundColor(Color.WHITE);
-
-        GUI_Field burgerbaren = gui.getFields()[1];
-        burgerbaren.setTitle("Burgerbaren");
-        burgerbaren.setSubText("M1");
-
-        GUI_Field pizzeriaet = gui.getFields()[2];
-        pizzeriaet.setTitle("Pizzeriaet");
-        pizzeriaet.setSubText("M1");
-
-        GUI_Field slikbutikken = gui.getFields()[4];
-        slikbutikken.setTitle("Slikbutikken");
-        slikbutikken.setSubText("M1");
-
-        GUI_Field iskiosken = gui.getFields()[5];
-        iskiosken.setTitle("Iskiosken");
-        iskiosken.setSubText("M1");
-
-        GUI_Field fængsel = gui.getFields()[6];
-        fængsel.setSubText("Fængsel");
-
-        GUI_Field museet = gui.getFields()[7];
-        museet.setTitle("Museet");
-        museet.setSubText("M2");
-
-        GUI_Field biblioteket = gui.getFields()[8];
-        biblioteket.setTitle("Biblioteket");
-        biblioteket.setSubText("M2");
-
-        GUI_Field skaterparken = gui.getFields()[10];
-        skaterparken.setTitle("Skaterparken");
-        skaterparken.setSubText("M2");
-
-        GUI_Field swimmingpoolen = gui.getFields()[11];
-        swimmingpoolen.setTitle("Swimmingpoolen");
-        swimmingpoolen.setSubText("M2");
-
-        GUI_Field freeparking = gui.getFields()[12];
-        freeparking.setTitle("Gratis Parkering");
-
-        GUI_Field spillehallen = gui.getFields()[13];
-        spillehallen.setTitle("Spillehallen");
-        spillehallen.setSubText("M3");
-
-        GUI_Field biografen = gui.getFields()[14];
-        biografen.setTitle("Biografen");
-        biografen.setSubText("M3");
-
-        GUI_Field legetøjsbutikken = gui.getFields()[16];
-        legetøjsbutikken.setTitle("Legetøjsbutikken");
-        legetøjsbutikken.setSubText("M3");
-
-        GUI_Field dyrebutikken = gui.getFields()[17];
-        dyrebutikken.setTitle("Dyrebutikken");
-        dyrebutikken.setSubText("M3");
-
-        GUI_Field gåifængsel = gui.getFields()[18];
-        gåifængsel.setSubText("Gå i fængsel");
-
-        GUI_Field bowlinghallen = gui.getFields()[19];
-        bowlinghallen.setTitle("Bowlinghallen");
-        bowlinghallen.setSubText("M4");
-
-        GUI_Field zoo = gui.getFields()[20];
-        zoo.setTitle("Zoo");
-        zoo.setSubText("M4");
-
-        GUI_Field vandlandet = gui.getFields()[22];
-        vandlandet.setTitle("Vandlandet");
-        vandlandet.setSubText("M4");
-
-        GUI_Field strandpromenaden = gui.getFields()[23];
-        strandpromenaden.setTitle("Strandpromenaden");
-        strandpromenaden.setSubText("M4");
 
         /*
         Scanner scanner = new Scanner(System.in);

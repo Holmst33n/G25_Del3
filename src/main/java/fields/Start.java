@@ -2,6 +2,6 @@ package fields;
 
 public class Start {
 
-    // Nothing happens here.
+    // Her skal der være en setBalance() som giver den pågældende spiller 2M mere
 
 }

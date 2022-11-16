@@ -1,6 +1,6 @@
 package fields;
 public class Jail {
-    int bail = 0;
+    final int bail = 1;
     int[] playersInJail = new int[4];
     public int freePlayer(Boolean isInJail){
         if(isInJail == null){
@@ -8,8 +8,6 @@ public class Jail {
         }
         if(isInJail){
             isInJail = false;
-            bail = 1;
-        }
         return bail;
     }
 

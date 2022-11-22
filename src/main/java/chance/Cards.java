@@ -1,29 +1,45 @@
 package chance;
 import java.util.HashMap;
 public class Cards {
-    String description;
-    int value;
 
-    Cards(String desc, int value) {
-        this.description = desc;
-        this.value = value;
-    }
-    public String getDescription(){
-    }
-    public int getValue(){
-    }
-    //Idéen med koden her er at:
-    //Overstående skal bruges til basale kort med én handling
-    //Understående skal bruges til kort med flere handlinger f.eks. Ryk x felter tilbage og betal x penge
-    public String text;
-    public HashMap<String, Integer> actions;
-    Cards(String text) {
-        this.text = text;
-        actions = new HashMap<String, Integer>();
-    }
-    addAction(String action, int value) {
-        actions.put(action, value);
-    }
-    //Der skal tilføjes cardDraw metode her
+    private int type;
+    private String desc;
+    private int action;
+    private int parameter;
 
+    Cards () {
+        desc = "";
+        return;
+    }
+    Cards (int type, String desc, int action) {
+        this.type = type;
+        this.desc = desc;
+        this.action = action;
+        return;
+    }
+    Cards (int type, String desc, int action, int parameter) {
+        this.type = type;
+        this.desc = desc;
+        this.action = action;
+        this.parameter = parameter;
+        return;
+    }
+    public int getType () {
+        return type;
+    }
+    public int getAction () {
+        return action;
+    }
+    public int getAmount () {
+        return parameter;
+    }
+    public int getDestination () {
+        return parameter;
+    }
+    public int getNumSpaces() {
+        return parameter;
+    }
+    public String toString () {
+        return desc;
+    }
 }

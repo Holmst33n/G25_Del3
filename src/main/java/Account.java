@@ -1,5 +1,3 @@
-package main.java;
-
 public class Account {
     private int balance;
     private boolean hasLost;

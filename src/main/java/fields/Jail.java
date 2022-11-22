@@ -1,6 +1,6 @@
- package fields;
+package fields;
 
- public class Jail {
+ public class Jail extends Fields{
     final int bail = 1;
 
      public boolean isPlayerOneIsInJail() {
@@ -24,19 +24,20 @@
     public void putPlayerInJail(int playerId){
         if(playerId == 1){
             playerOneIsInJail = true;
-            Player1.setJailPosition();
+            player1.setJailPosition();
+            //disse skal fikses
         }
         if(playerId == 2){
             playerTwoIsInJail = true;
-            Player2.setJailPosition();
+            player2.setJailPosition();
         }
         if(playerId == 3){
             playerThreeIsInJail = true;
-            Player3.setJailPosition();
+            player3.setJailPosition();
         }
         if(playerId == 4){
             playerFourIsInJail = true;
-            Player4.setJailPosition();
+            player4.setJailPosition();
         }
     }
 

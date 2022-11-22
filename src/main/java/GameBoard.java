@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import fields.*;
 
 public class GameBoard {
 
@@ -23,6 +24,15 @@ public class GameBoard {
         Player player2 = new Player(2, "Kat");
         Player player3 = new Player(3, "Bil");
         Player player4 = new Player(4, "Båd");
+
+        Fields[] fields = new Field[24];
+        fields[0] = new Start();
+        fields[1] = new Field("Gadekøkkenet", 1, 1);
+        fields[2] = new Field("Pizzahuset", 2, 1);
+        fields[3] = new Chance();
+        fields[4] = new Field("Godtebutikken", 4, 1);
+        fields[5] = new Field("Iskiosken", 5, 1);
+        fields[6] = new Jail();
 
         while(player1.getBalance() > 0 && player2.getBalance() > 0 && player3.getBalance() > 0 && player4.getBalance() > 0) {
             Die die = new Die();

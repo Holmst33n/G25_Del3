@@ -62,8 +62,8 @@ public class Player {
         }
     }
 
-    //sets position of player to jail
-    public void setJailPosition(){
-        this.position = 6;
+    //sets position of player to a set position
+    public void setRealPosition(int position){
+        this.position = position;
     }
 }

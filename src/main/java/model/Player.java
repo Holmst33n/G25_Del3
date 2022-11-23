@@ -1,3 +1,5 @@
+package model;
+
 public class Player {
 
     private boolean turnIndicator;
@@ -6,6 +8,8 @@ public class Player {
     private String playerName;
 
     private int position = 0;
+    private boolean inJail;
+
 
     /**
      * @param playerFigure 1-4
@@ -65,5 +69,15 @@ public class Player {
     //sets position of player to a set position
     public void setRealPosition(int position){
         this.position = position;
+    }
+
+    public void setInJail(boolean b) {
+
+        this.inJail = b;
+
+    }
+
+    public boolean isInJail() {
+        return inJail;
     }
 }

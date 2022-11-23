@@ -16,7 +16,7 @@
         <mxCell id="bWTXbUgkp7v5hVTfX9t1-4" value="Item 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="bWTXbUgkp7v5hVTfX9t1-1" vertex="1">
           <mxGeometry y="90" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="bWTXbUgkp7v5hVTfX9t1-5" value="Die" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+        <mxCell id="bWTXbUgkp7v5hVTfX9t1-5" value="model.Die" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="40" y="400" width="200" height="120" as="geometry" />
         </mxCell>
         <mxCell id="bWTXbUgkp7v5hVTfX9t1-6" value="MAX : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="bWTXbUgkp7v5hVTfX9t1-5" vertex="1">
@@ -28,7 +28,7 @@
         <mxCell id="bWTXbUgkp7v5hVTfX9t1-8" value="getFaceValue()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" parent="bWTXbUgkp7v5hVTfX9t1-5" vertex="1">
           <mxGeometry y="90" width="200" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="bWTXbUgkp7v5hVTfX9t1-9" value="Player" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
+        <mxCell id="bWTXbUgkp7v5hVTfX9t1-9" value="model.Player" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
           <mxGeometry x="600" y="400" width="200" height="90" as="geometry">
             <mxRectangle x="600" y="400" width="70" height="30" as="alternateBounds" />
           </mxGeometry>

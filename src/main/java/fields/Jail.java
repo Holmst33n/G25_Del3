@@ -8,7 +8,12 @@ public class Jail extends Fields{
     public void putPlayerInJail(Player player){
         player.setInJail(true);
         player.setRealPosition(7);
-        player.setBalance(-2);
+        if(player.hasOutOfJailCard()) {
+            player.setOutOfJailCard(false);
+        }
+        else{
+            player.setBalance(-2);
+        }
     }
 
     public void freePlayer(Player player) {

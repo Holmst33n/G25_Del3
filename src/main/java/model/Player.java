@@ -7,6 +7,16 @@ public class Player {
     private int playerFigure;
     private String playerName;
 
+    private boolean outOfJailCard = false;
+
+    public boolean hasOutOfJailCard() {
+        return outOfJailCard;
+    }
+
+    public void setOutOfJailCard(boolean outOfJail) {
+        this.outOfJailCard = outOfJail;
+    }
+
     private int position = 0;
     private boolean inJail;
 

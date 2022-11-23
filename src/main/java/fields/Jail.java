@@ -3,7 +3,6 @@ package fields;
 import model.Player;
 
 public class Jail extends Fields{
-    final int bail = 1;
 
     public void putPlayerInJail(Player player){
         player.setInJail(true);

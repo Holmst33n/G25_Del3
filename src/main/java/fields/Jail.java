@@ -12,7 +12,7 @@ public class Jail extends Fields{
             player.setOutOfJailCard(false);
         }
         else{
-            player.setBalance(-2);
+            player.setBalance(-1);
         }
     }
 

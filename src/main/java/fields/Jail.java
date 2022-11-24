@@ -4,16 +4,11 @@ import model.Player;
 
 public class Jail extends Fields{
 
-    public void putPlayerInJail(Player player){
-        player.setInJail(true);
-        player.setRealPosition(7);
-        if(player.hasOutOfJailCard()) {
-            player.setOutOfJailCard(false);
-        }
-        else{
-            player.setBalance(-1);
-        }
+    private String fieldName;
+    public Jail(String fieldName){
+        this.fieldName = fieldName;
     }
+
 
     public void freePlayer(Player player) {
         player.setInJail(false);

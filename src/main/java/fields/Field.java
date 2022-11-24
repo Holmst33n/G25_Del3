@@ -1,11 +1,13 @@
 package fields;
 
+import model.Player;
+
 public class Field extends Fields {
-    String fieldName;
-    int fieldID;
-    int owner = 0; // When a field is bought, this becomes the owning players playerID
-    int cost; // Price of the Field, when bought by a player
-    boolean isOwned = false;
+    private String fieldName;
+    private int fieldID;
+    private int owner = 0; // When a field is bought, this becomes the owning players playerID
+    private int cost; // Price of the Field, when bought by a player
+    private boolean isOwned = false;
 
     public Field(String fieldName, int fieldID, int cost) {
         this.fieldName = fieldName;
@@ -13,20 +15,20 @@ public class Field extends Fields {
         this.cost = cost;
         this.owner = 0;
     }
-    public int landOnField(int playerId) {
+    @Override
+    public void landOnField(Player player) {
         int financialConsequence = 0;
-        System.out.println("Du er landet på " + fieldName);
 
-        if (playerId != this.owner) {
+        if (player.getPlayerFigure() != this.owner) {
             if (isOwned) {
                 financialConsequence = cost;
             }
             if (!isOwned) {
-                owner = playerId;
+                owner = player.getPlayerFigure();
                 isOwned = true;
                 financialConsequence = cost;
             }
         }
-        return financialConsequence;
+        player.setBalance(financialConsequence);
     }
 }

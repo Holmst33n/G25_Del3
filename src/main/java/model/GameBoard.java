@@ -34,8 +34,7 @@ public class GameBoard {
             Die die = new Die();
 
             if (player1.isTurnIndicator()) {
-                int roll = die.roll();
-                player1.setPosition(roll);
+                player1.setPosition(die.roll());
                 //kald metode for felt der er landet på her
                 player1.setTurnIndicator(false);
                 player2.setTurnIndicator(true);
@@ -43,8 +42,7 @@ public class GameBoard {
                 scanner.nextLine();
             }
             else if (player2.isTurnIndicator()) {
-                int roll = die.roll();
-                player2.setPosition(roll);
+                player2.setPosition(die.roll());
                 //kald metode for felt der er landet på her
                 player2.setTurnIndicator(false);
                 player3.setTurnIndicator(true);
@@ -52,8 +50,7 @@ public class GameBoard {
                 scanner.nextLine();
             }
             else if (player3.isTurnIndicator()) {
-                int roll = die.roll();
-                player3.setPosition(roll);
+                player3.setPosition(die.roll());
                 //kald metode for felt der er landet på her
                 player3.setTurnIndicator(false);
                 player4.setTurnIndicator(true);
@@ -61,8 +58,7 @@ public class GameBoard {
                 scanner.nextLine();
             }
             else if (player4.isTurnIndicator()) {
-                int roll = die.roll();
-                player4.setPosition(roll);
+                player4.setPosition(die.roll());
                 //kald metode for felt der er landet på her
                 player4.setTurnIndicator(false);
                 player1.setTurnIndicator(true);

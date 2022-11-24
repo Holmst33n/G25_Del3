@@ -34,7 +34,6 @@ public class FieldController {
     }
 
     public void landOnField(Player player){
-
         int fieldHit = player.getPosition()-1;
         switch(fieldHit){
             case 0:

@@ -1,5 +1,7 @@
 package fields;
 
+import model.Player;
+
 public class Start extends Fields{
 
     private String fieldName;

@@ -13,6 +13,10 @@ public abstract class Fields {
     public Fields() {
     }
     public void landOnField(Player player) {
-        System.out.println(player.getPlayerFigure() + " er landet på " + fieldName);
+        System.out.println(player.getPlayerFigure() + " er landet på " + getFieldName());
+    }
+
+    public String getFieldName(){
+        return this.fieldName;
     }
 }

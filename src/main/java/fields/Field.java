@@ -2,6 +2,8 @@ package fields;
 
 import model.Player;
 
+import java.sql.SQLOutput;
+
 public class Field extends Fields {
     private String fieldName;
     private int fieldID;

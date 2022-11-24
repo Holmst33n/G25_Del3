@@ -10,7 +10,4 @@ public class Jail extends Fields{
     }
 
 
-    public void freePlayer(Player player) {
-        player.setInJail(false);
-    }
 }

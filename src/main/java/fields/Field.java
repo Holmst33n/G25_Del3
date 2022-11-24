@@ -15,6 +15,7 @@ public class Field extends Fields {
     }
     public int landOnField(int playerId) {
         int financialConsequence = 0;
+        System.out.println("Du er landet på " + fieldName);
 
         if (playerId != this.owner) {
             if (isOwned) {

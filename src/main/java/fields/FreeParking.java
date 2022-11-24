@@ -1,6 +1,6 @@
 package fields;
 
-public class FreeParking {
+public class FreeParking extends Fields{
 
     /// Nothing happens in FreeParking
 

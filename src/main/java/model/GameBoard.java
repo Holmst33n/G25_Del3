@@ -27,14 +27,8 @@ public class GameBoard {
         Player player3 = new Player(3, "Bil");
         Player player4 = new Player(4, "Båd");
 
-        /*Fields[] fields = new Field[24];
-        fields[0] = new Start();
-        fields[1] = new Field("Gadekøkkenet", 1, 1);
-        fields[2] = new Field("Pizzahuset", 2, 1);
-        fields[3] = new Chance();
-        fields[4] = new Field("Godtebutikken", 4, 1);
-        fields[5] = new Field("Iskiosken", 5, 1);
-        fields[6] = new Jail();*/
+        FieldController fieldController = new FieldController();
+        fieldController.generateFields();
 
         while(player1.getBalance() > 0 && player2.getBalance() > 0 && player3.getBalance() > 0 && player4.getBalance() > 0) {
             Die die = new Die();
@@ -45,7 +39,7 @@ public class GameBoard {
                 //kald metode for felt der er landet på her
                 player1.setTurnIndicator(false);
                 player2.setTurnIndicator(true);
-                System.out.println("player1 har rullet " + roll + " og lander på " + player1.getPosition());
+                fieldController.landOnField(player1);
                 scanner.nextLine();
             }
             else if (player2.isTurnIndicator()) {
@@ -54,7 +48,7 @@ public class GameBoard {
                 //kald metode for felt der er landet på her
                 player2.setTurnIndicator(false);
                 player3.setTurnIndicator(true);
-                System.out.println("player2 har rullet " + roll + " og lander på " + player2.getPosition());
+                fieldController.landOnField(player2);
                 scanner.nextLine();
             }
             else if (player3.isTurnIndicator()) {
@@ -63,7 +57,7 @@ public class GameBoard {
                 //kald metode for felt der er landet på her
                 player3.setTurnIndicator(false);
                 player4.setTurnIndicator(true);
-                System.out.println("player3 har rullet " + roll + " og lander på " + player3.getPosition());
+                fieldController.landOnField(player3);
                 scanner.nextLine();
             }
             else if (player4.isTurnIndicator()) {
@@ -72,7 +66,7 @@ public class GameBoard {
                 //kald metode for felt der er landet på her
                 player4.setTurnIndicator(false);
                 player1.setTurnIndicator(true);
-                System.out.println("player4 har rullet " + roll + " og lander på " + player4.getPosition());
+                fieldController.landOnField(player4);
                 scanner.nextLine();
             }
         }

@@ -37,14 +37,32 @@ public class FieldController {
     public void landOnField(Player player){
         int fieldHit = player.getPosition()-1;
         switch(fields[fieldHit].getClass().getSimpleName()){
-            case "Field" -> {
+            case "Property" -> {
                 Property property = (Property) fields[fieldHit];
                 property.landOnField(player);
             }
+            case "Start" -> {
+                Start start = (Start) fields[fieldHit];
+                start.landOnField(player);
+            }
+            case "GoToJail" -> {
+                GoToJail goToJail = (GoToJail) fields[fieldHit];
+                goToJail.landOnField(player);
+            }
+            case "Jail" -> {
+                Jail jail = (Jail) fields[fieldHit];
+                jail.landOnField(player);
+            }
+            case "Chance" -> {
+                Chance chance = (Chance) fields[fieldHit];
+                chance.landOnField(player);
+            }
+            case "FreeParking" -> {
+                FreeParking freeParking = (FreeParking) fields[fieldHit];
+                freeParking.landOnField(player);
+            }
 
 
-            default:
-                System.out.println("noget gik galt");
         }
     }
 }

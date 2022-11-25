@@ -12,7 +12,7 @@ public class Chance extends Field {
     }
 
     public void landOnField(Player player){
-        System.out.println(player.getPlayerFigure() + " er landet på " + getFieldName());
+        System.out.println("Spiller " + player.getPlayerFigure() + " er landet på " + getFieldName());
     }
     public String getFieldName(){
         return this.fieldName;

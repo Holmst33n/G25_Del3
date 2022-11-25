@@ -15,27 +15,33 @@ public class Property extends Field {
         this.cost = cost;
         this.owner = 0;
     }
-    @Override
-    public void landOnField(Player player) {
-        System.out.println(player.getPlayerFigure() + " er landet på " + getFieldName());
-        int financialConsequence = 0;
 
-        if (isOwned && player.getPlayerFigure() == owner) {
+    public void landOnField(Player player, Player secondPlayer, Player thirdPlayer, Player fourthPlayer) {
+        System.out.println("Spiller " + player.getPlayerFigure() + " er landet på " + getFieldName());
+
+        if (this.isOwned && player.getPlayerFigure() == this.owner) {
             System.out.println("Du hænger ud på din egen grund");
         }
 
-        else if (isOwned && player.getPlayerFigure() != owner) {
-            financialConsequence = cost;
-            System.out.println("Spiller " + player.getPlayerFigure() + " betaler " + financialConsequence + " i leje til spiller " + this.owner);
+        else if (this.isOwned && player.getPlayerFigure() != this.owner) {
+            System.out.println("Spiller " + player.getPlayerFigure() + " betaler " + this.cost + " i leje til spiller " + this.owner);
+            if(this.owner == secondPlayer.getPlayerFigure()){
+                secondPlayer.addBalance(this.cost);
+            }
+            else if(this.owner == thirdPlayer.getPlayerFigure()){
+                thirdPlayer.addBalance(this.cost);
+            }
+            else if(this.owner == fourthPlayer.getPlayerFigure()){
+                fourthPlayer.addBalance(this.cost);
+            }
         }
 
-        else if (!isOwned) {
-            owner = player.getPlayerFigure();
+        else if (!this.isOwned) {
+            this.owner = player.getPlayerFigure();
             this.isOwned = true;
-            financialConsequence = cost;
-            System.out.println("Spiller " + player.getPlayerFigure() + " køber grunden for " + financialConsequence);
+            System.out.println("Spiller " + player.getPlayerFigure() + " køber grunden for " + this.cost);
         }
-        player.setBalance(financialConsequence);
+        player.setBalance(this.cost);
     }
 
     public String getFieldName(){

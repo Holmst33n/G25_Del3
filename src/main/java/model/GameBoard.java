@@ -29,7 +29,6 @@ public class GameBoard {
         Player player4 = new Player(4, "Båd");
 
         FieldController fieldController = new FieldController();
-        fieldController.generateFields();
 
         while(player1.getBalance() > 0 && player2.getBalance() > 0 && player3.getBalance() > 0 && player4.getBalance() > 0) {
             Die die = new Die();
@@ -40,7 +39,7 @@ public class GameBoard {
                 player1.setPosition(i);
                 player1.setTurnIndicator(false);
                 player2.setTurnIndicator(true);
-                fieldController.landOnField(player1);
+                fieldController.checkFieldHit(player1, player2, player3, player4);
                 System.out.println("Spiller 1's balance: " + player1.getBalance());
                 scanner.nextLine();
             }
@@ -50,7 +49,7 @@ public class GameBoard {
                 player2.setPosition(i);
                 player2.setTurnIndicator(false);
                 player3.setTurnIndicator(true);
-                fieldController.landOnField(player2);
+                fieldController.checkFieldHit(player2, player3, player4, player1);
                 System.out.println("Spiller 2's balance: " + player2.getBalance());
                 scanner.nextLine();
             }
@@ -60,7 +59,7 @@ public class GameBoard {
                 player3.setPosition(i);
                 player3.setTurnIndicator(false);
                 player4.setTurnIndicator(true);
-                fieldController.landOnField(player3);
+                fieldController.checkFieldHit(player3, player4, player1, player2);
                 System.out.println("Spiller 3's balance: " + player3.getBalance());
                 scanner.nextLine();
             }
@@ -70,7 +69,7 @@ public class GameBoard {
                 player4.setPosition(i);
                 player4.setTurnIndicator(false);
                 player1.setTurnIndicator(true);
-                fieldController.landOnField(player4);
+                fieldController.checkFieldHit(player4, player1, player2, player3);
                 System.out.println("Spiller 4's balance: " + player4.getBalance());
                 scanner.nextLine();
             }
@@ -80,7 +79,5 @@ public class GameBoard {
     public int getPlayerAmount(){
         return this.playerAmount;
     }
-
-
 
 }

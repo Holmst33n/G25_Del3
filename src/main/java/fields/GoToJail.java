@@ -10,7 +10,7 @@ public class GoToJail extends Field {
 
     @Override
     public void landOnField(Player player){
-        System.out.println(player.getPlayerFigure() + " er landet på " + getFieldName());
+        System.out.println("Spiller " + player.getPlayerFigure() + " er landet på " + getFieldName() + ". Du betaler 1 for at komme ud");
         player.setRealPosition(7);
         if(player.hasOutOfJailCard()) {
             player.setOutOfJailCard(false);
@@ -18,7 +18,6 @@ public class GoToJail extends Field {
         else{
             player.setBalance(-1);
         }
-        System.out.println("Du er blevet sat i fængsel, spyttemand");
     }
 
     public String getFieldName(){

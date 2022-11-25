@@ -34,12 +34,12 @@ public class FieldController {
         };
     }
 
-    public void landOnField(Player player){
+    public void checkFieldHit(Player player, Player secondPlayer, Player thirdPlayer, Player fourthPlayer){
         int fieldHit = player.getPosition()-1;
         switch(fields[fieldHit].getClass().getSimpleName()){
             case "Property" -> {
                 Property property = (Property) fields[fieldHit];
-                property.landOnField(player);
+                property.landOnField(player, secondPlayer, thirdPlayer, fourthPlayer);
             }
             case "Start" -> {
                 Start start = (Start) fields[fieldHit];
@@ -61,8 +61,6 @@ public class FieldController {
                 FreeParking freeParking = (FreeParking) fields[fieldHit];
                 freeParking.landOnField(player);
             }
-
-
         }
     }
 }

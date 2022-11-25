@@ -43,6 +43,10 @@ public class Player {
         }
     }
 
+    public void addBalance(int amount) {
+        account.addBalance(amount);
+    }
+
     public int getPlayerFigure(){
         return this.playerFigure;
     }
@@ -73,6 +77,7 @@ public class Player {
         if(this.position > 24){
             this.position = this.position-24;
             this.setBalance(2);
+            System.out.println("Spiller " + this.playerFigure + " har passeret start og modtager 2");
         }
     }
 

@@ -17,19 +17,19 @@ public class Account {
     //-----------------------------------------------------------------
 
     public void setBalance(int amount) {
-
         if(amount < 0) {
             this.balance += amount;
         }
         else if(amount > 0) {
             this.balance -= amount;
         }
-
         if(this.balance < 0 || this.balance == 0){
             System.out.println("Du er gået fallit, du har tabt spillet!");
             this.hasLost = true;
         }
-
+    }
+    public void addBalance(int amount) {
+        this.balance += amount;
     }
 
     public boolean checkIfLost(){

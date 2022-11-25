@@ -1,15 +1,21 @@
 package fields;
 
 import model.Player;
-import org.jetbrains.annotations.NotNull;
 
-public class FreeParking extends Fields{
+public class FreeParking extends Field {
 
     private String fieldName;
     public FreeParking(String fieldName){
         this.fieldName = fieldName;
     }
 
+    public void landOnField(Player player){
+        System.out.println(player.getPlayerFigure() + " er landet på " + getFieldName());
+    }
+
+    public String getFieldName(){
+        return this.fieldName;
+    }
 
     /// Nothing happens in FreeParking
 

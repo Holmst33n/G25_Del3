@@ -1,7 +1,7 @@
 package fields;
 import model.Player;
 
-public class GoToJail extends Fields{
+public class GoToJail extends Field {
 
     private String fieldName;
     public GoToJail(String fieldName){
@@ -10,6 +10,7 @@ public class GoToJail extends Fields{
 
     @Override
     public void landOnField(Player player){
+        System.out.println(player.getPlayerFigure() + " er landet på " + getFieldName());
         player.setRealPosition(7);
         if(player.hasOutOfJailCard()) {
             player.setOutOfJailCard(false);
@@ -18,6 +19,10 @@ public class GoToJail extends Fields{
             player.setBalance(-1);
         }
         System.out.println("Du er blevet sat i fængsel, spyttemand");
+    }
+
+    public String getFieldName(){
+        return this.fieldName;
     }
 
     // Here we should have a setPlayersInJail(), Can't get it to work right now

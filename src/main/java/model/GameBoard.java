@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 import fields.*;
 
@@ -34,35 +35,43 @@ public class GameBoard {
             Die die = new Die();
 
             if (player1.isTurnIndicator()) {
-                player1.setPosition(die.roll());
-                //kald metode for felt der er landet på her
+                int i = die.roll();
+                System.out.println("Spiller 1 slår " + i);
+                player1.setPosition(i);
                 player1.setTurnIndicator(false);
                 player2.setTurnIndicator(true);
                 fieldController.landOnField(player1);
+                System.out.println("Spiller 1's balance: " + player1.getBalance());
                 scanner.nextLine();
             }
             else if (player2.isTurnIndicator()) {
-                player2.setPosition(die.roll());
-                //kald metode for felt der er landet på her
+                int i = die.roll();
+                System.out.println("Spiller 2 slår " + i);
+                player2.setPosition(i);
                 player2.setTurnIndicator(false);
                 player3.setTurnIndicator(true);
                 fieldController.landOnField(player2);
+                System.out.println("Spiller 2's balance: " + player2.getBalance());
                 scanner.nextLine();
             }
             else if (player3.isTurnIndicator()) {
-                player3.setPosition(die.roll());
-                //kald metode for felt der er landet på her
+                int i = die.roll();
+                System.out.println("Spiller 3 slår " + i);
+                player3.setPosition(i);
                 player3.setTurnIndicator(false);
                 player4.setTurnIndicator(true);
                 fieldController.landOnField(player3);
+                System.out.println("Spiller 3's balance: " + player3.getBalance());
                 scanner.nextLine();
             }
             else if (player4.isTurnIndicator()) {
-                player4.setPosition(die.roll());
-                //kald metode for felt der er landet på her
+                int i = die.roll();
+                System.out.println("Spiller 4 slår " + i);
+                player4.setPosition(i);
                 player4.setTurnIndicator(false);
                 player1.setTurnIndicator(true);
                 fieldController.landOnField(player4);
+                System.out.println("Spiller 4's balance: " + player4.getBalance());
                 scanner.nextLine();
             }
         }

@@ -17,7 +17,7 @@ public class Player {
         this.outOfJailCard = outOfJail;
     }
 
-    private int position = 0;
+    private int position = 1;
     private boolean inJail;
 
 
